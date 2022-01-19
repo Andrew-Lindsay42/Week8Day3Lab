@@ -17,13 +17,15 @@ const NewBookingForm = function ({addBooking}){
         .then((data)=>{
             addBooking(data.insertedId, formData);
         })
+        setFormData('')
+        
     }
 
     return (
         <div className='booking-form'>
         <form onSubmit={onSubmit}>
             <label htmlFor='name'>Name: </label>
-            <input onChange={onChange} id='name' type='text'></input>
+            <input onChange={onChange} id='name' type='text' required></input>
             <label htmlFor='email'>Email: </label>
             <input onChange={onChange} id='email' type='email'></input>
             <label htmlFor='checked_in'>Checked In? </label>

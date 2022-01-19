@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:5000/api/bookings'
+const baseUrl = 'http://localhost:5000/api/bookings/'
 
 export const getBookings = function () {
     return fetch(baseUrl)

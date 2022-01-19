@@ -17,13 +17,18 @@ const HotelBookingContainer = function (){
         newBooking._id = id
         const temp = [...bookings, newBooking]
         setBookings(temp)
-    }
+    };
+
+    const removeBooking = (booking) => {
+        const newBookings = bookings.filter(filteredBooking => filteredBooking !== booking)
+        setBookings(newBookings)
+    };
 
     return (
         <div className='hotel-booking-container'>
-        <h2>Hello from HotelBookingContainer</h2>
+        <h2>Hotels yeah!!!</h2>
         <NewBookingForm addBooking={addBooking}/>
-        <BookingsList bookings={bookings} />
+        <BookingsList bookings={bookings} removeBooking={removeBooking}/>
         </div>
     )
 };

@@ -1,9 +1,14 @@
 import React from 'react';
+import {deleteBooking} from '../containers/BookingService';
 
-const BookingItem = function({booking}){
+const BookingItem = function({booking, removeBooking}){
     
-    let booked = ''
+    const handleBinClick = () => {
+        deleteBooking(booking._id)
+        removeBooking(booking)
+    }
 
+    let booked = ''
     if (booking.checked_in) {
         booked = 'True'
     } else {
@@ -14,6 +19,7 @@ const BookingItem = function({booking}){
     <div className='booking_item'>
     <h4>{booking.name}</h4>
     <p>{booking.email} {booked}</p>
+    <i onClick={handleBinClick} className="far fa-trash-alt"></i>
     </div>
     )
 };
