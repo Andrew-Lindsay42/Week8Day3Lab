@@ -11,7 +11,6 @@ const BookingsList = function ({bookings, removeBooking}){
 
     return (
     <>
-    <h3>Hello from BookingsList</h3>
     {BookingItems}
     </>
     )

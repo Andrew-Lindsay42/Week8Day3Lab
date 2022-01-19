@@ -24,18 +24,22 @@ const NewBookingForm = function ({addBooking}){
     return (
         <div className='booking-form'>
         <form onSubmit={onSubmit}>
-            <label htmlFor='name'>Name: </label>
-            <input onChange={onChange} id='name' type='text' required></input>
+            <div className='form-item'>
+                <label htmlFor='name'>Name: </label>
+                <input onChange={onChange} id='name' type='text' required></input>
+            </div>
+            <div className='form-item'>
             <label htmlFor='email'>Email: </label>
             <input onChange={onChange} id='email' type='email'></input>
+            </div>
+            <div className='form-item'>
             <label htmlFor='checked_in'>Checked In? </label>
             <select onChange={onChange} id='check_in'>
                 <option value='true'>Yes</option>
                 <option value='false'>No</option>
             </select>
+            </div>
             <input type='submit' value='Save' id='save'></input>
-            
-
         </form>
         </div>
     )

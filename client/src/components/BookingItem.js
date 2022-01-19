@@ -20,6 +20,7 @@ const BookingItem = function({booking, removeBooking}){
     <h4>{booking.name}</h4>
     <p>{booking.email} {booked}</p>
     <i onClick={handleBinClick} className="far fa-trash-alt"></i>
+    <hr/>
     </div>
     )
 };
